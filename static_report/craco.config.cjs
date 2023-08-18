@@ -33,14 +33,6 @@ if (event === "serve:single" || event === "serve:comparison") {
 module.exports = {
   webpack: {
     configure: {
-      optimization: {
-        runtimeChunk: false,
-        splitChunks: {
-          chunks(chunk) {
-            return false;
-          }
-        }
-      },
       plugins: [
         new webpack.optimize.LimitChunkCountPlugin({
           maxChunks: 1,
